@@ -6,7 +6,6 @@ const { getCollection } = require("./models/index");
 const { ObjectId } = require("mongodb");
 
 // GET /todos
-// GET /todos
 router.get("/todos", async (req, res) => {
     const collection = getCollection();
     const todos = await collection.find({}).toArray();
@@ -14,7 +13,6 @@ router.get("/todos", async (req, res) => {
     res.status(200).json(todos);
 });
 
-// POST /todos
 // POST /todos
 router.post("/todos", async (req, res) => {
     const collection = getCollection();
